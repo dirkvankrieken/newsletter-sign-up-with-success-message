@@ -1,0 +1,198 @@
+/* variables */
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* reset styles */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* end of reset styles */
+/* attribution element on the bottom of the page */
+.attribution {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(227, 16%, 71%);
+}
+
+/* start regular css */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--dark-slate-grey);
+  background-color: var(--charcoal-grey);
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+picture img {
+  width: 100%;
+}
+
+.info {
+  margin: 0 10px;
+}
+
+/* main element */
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--white);
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 10px;
+}
+
+main p {
+  margin: 20px 10px 30px;
+}
+li {
+  margin: 10px 40px;
+  list-style-image: url(assets/images/icon-list.svg);
+}
+
+li span {
+  position: relative;
+  top: -5px;
+  left: 10px;
+}
+
+.email {
+  margin: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.email-box {
+  margin: 5px 10px 20px 10px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input {
+  border: none;
+  width: 100%;
+}
+
+.button-container {
+  margin: 0 10px;
+}
+
+button {
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+}
+
+#success {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100vh;
+  background-color: white;
+  width: 100%;
+}
+
+#success img {
+  width: 64px;
+}
+
+#success p {
+  margin: 20px;
+}
+
+#success .button-container {
+  margin: 40px 20px;
+}
+
+#success button {
+  /* margin: 20px; */
+  /* width: 100%; */
+  /* position: absolute; */
+  /* bottom: 20px; */
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    padding: 20px;
+    margin: auto;
+    width: 800px;
+    height: auto;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    max-width: 1400px !important;
+  }
+  .info {
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  main {
+    margin: auto;
+    max-width: 500px;
+  }
+}
