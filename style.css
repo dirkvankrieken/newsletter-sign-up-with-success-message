@@ -84,9 +84,8 @@ picture img {
 main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--white);
-  width: 100%;
 }
 
 h1 {
@@ -95,7 +94,7 @@ h1 {
 }
 
 main p {
-  margin: 20px 10px 30px;
+  margin: 10px;
 }
 li {
   margin: 10px 40px;
@@ -108,30 +107,52 @@ li span {
   left: 10px;
 }
 
-.email {
-  margin: 10px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
 h1 {
   font-weight: 700;
 }
 
-.email-box {
-  margin: 5px 10px 20px 10px;
-  padding: 10px 10px 10px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.email-heading-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-input {
-  border: none;
+.email,
+.invalid-email {
+  margin: 0 15px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.invalid-email {
+  color: hsl(4, 100%, 67%);
+}
+
+.invalid {
+  border: 1px solid hsl(4, 100%, 67%) !important;
+  background-color: hsl(5, 100%, 95%);
+  color: hsl(4, 100%, 67%);
+}
+
+.email-box {
+  width: auto;
+  margin: 5px 10px 20px 10px;
+}
+
+#email {
   width: 100%;
+  padding: 10px 20px;
+  height: 50px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
 }
 
 .button-container {
   margin: 0 10px;
+}
+
+button:hover {
+  background-color: hsl(4, 100%, 67%);
 }
 
 button {
@@ -141,6 +162,7 @@ button {
   border-radius: 10px;
   border: none;
   width: 100%;
+  font-weight: 700;
 }
 
 #success {
@@ -149,26 +171,25 @@ button {
   justify-content: end;
   height: 100vh;
   background-color: white;
-  width: 100%;
+}
+
+#success h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0 20px;
 }
 
 #success img {
+  margin: 25px;
   width: 64px;
 }
 
 #success p {
-  margin: 20px;
+  margin: 25px 25px 200px 25px;
 }
 
 #success .button-container {
-  margin: 40px 20px;
-}
-
-#success button {
-  /* margin: 20px; */
-  /* width: 100%; */
-  /* position: absolute; */
-  /* bottom: 20px; */
+  margin: 40px 25px;
 }
 
 .hidden {
@@ -180,9 +201,9 @@ button {
     padding: 20px;
     margin: auto;
     width: 800px;
-    height: auto;
+    min-height: auto;
     flex-direction: row-reverse;
-    border-radius: 10px;
+    border-radius: 20px;
     max-width: 1400px !important;
   }
   .info {
@@ -190,9 +211,20 @@ button {
   }
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 500px) {
   main {
     margin: auto;
-    max-width: 500px;
+  }
+
+  #success {
+    border-radius: 20px;
+    max-width: 450px;
+    height: auto;
+    margin: auto;
+    padding: 10px 40px;
+  }
+
+  #success p {
+    margin: 25px 25px 0;
   }
 }
