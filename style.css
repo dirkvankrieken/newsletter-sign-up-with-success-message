@@ -153,6 +153,7 @@ h1 {
 
 button:hover {
   background-color: hsl(4, 100%, 67%);
+  cursor: pointer;
 }
 
 button {
